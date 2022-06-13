@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f6d53fb2a918478e806b3dec9faabfc6" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.Appel" Width="1.5" PointX="3.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ListAnalysisAndProcedure" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ListPositions" Width="1.5" PointX="3.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ListTimeTableForWorker" Width="1.5" PointX="8.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Patient" Width="1.5" PointX="1.5" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Reception" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.sysdiagrams" Width="1.5" PointX="5.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.TimeTable" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Treatment" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Worker" Width="1.5" PointX="6" PointY="4.125" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_Appel_Patient" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Worker_Appel" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Treatment_ListAnalysisAndProcedure" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Worker_ListPositions" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_ListTimeTableForWorker_TimeTable" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_ListTimeTableForWorker_Worker" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Treatment_Reception" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Worker_Reception1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
