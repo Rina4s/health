@@ -47,6 +47,8 @@ namespace health
                     {
                         passwords.Background = new SolidColorBrush(Color.FromRgb(0, 255, 0));
                         MessageBox.Show("Успешная авторизация", "Успешно!", MessageBoxButton.OK, MessageBoxImage.Information);
+                        Window2 window2 = new Window2();
+                        window2.ShowDialog();
                         
                     }
                     else
@@ -71,6 +73,6 @@ namespace health
 
         }
 
-
+        
     }
 }

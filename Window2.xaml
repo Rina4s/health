@@ -6,7 +6,20 @@
         xmlns:local="clr-namespace:health"
         mc:Ignorable="d"
         Title="Здоровье +" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Background="#FF278B27">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="175"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Background="#FF278B27" >
+            <StackPanel>
+                <Image Source="Logo.png" Margin="10"/>
+                <Button Width="150" Height="40" Margin="10,10,10,10" Click="ShowPatients">Пациенты</Button>
+                <Button Width="150" Height="40" Margin="10,0,10,10" Click="ShowWorkers">Врачи</Button>
+            </StackPanel>
+        </Grid>
+        <Frame Grid.Column="1" x:Name="frame1"/>
+
     </Grid>
 </Window>

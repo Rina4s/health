@@ -17,6 +17,7 @@ namespace health
         public int id { get; set; }
         public int idWorker { get; set; }
         public int idTimeTable { get; set; }
+        public string Dtime { get =>Convert.ToString( TimeTable.date); }
     
         public virtual TimeTable TimeTable { get; set; }
         public virtual Worker Worker { get; set; }

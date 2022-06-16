@@ -16,13 +16,15 @@
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition Height="2*"/>
-            <RowDefinition/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="77*"/>
+            <RowDefinition Height="210*"/>
+            <RowDefinition Height="105*"/>
         </Grid.RowDefinitions>
-        <Image Source="Logo.png" Grid.Column="0" Grid.Row="0" Margin="0,10,0,0" />
-        <Label Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Медицинская клиника "Здоровье +"</Label>
-        <Grid Grid.Row="1" Grid.Column="1" Background="#FF50C878">
+        <Image Source="Logo.png" Grid.Column="0" Grid.Row="0" Margin="0,10,0.4,210.2" Grid.RowSpan="3" />
+        <Label Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" Margin="57.6,9.672,57.2,36.8">Медицинская клиника "Здоровье +"</Label>
+
+        <Grid Grid.Row="2" Background="#FF50C878" Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="2*"/>
                 <RowDefinition/>
@@ -32,12 +34,13 @@
                 <RowDefinition Height="2*"/>
             </Grid.RowDefinitions>
 
-            <Label Content="Авторизация" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="21"  FontWeight="Black"  />
-            <Label Content="Введите номер пользователя" HorizontalAlignment="Center" FontSize="14" Grid.Row="1" />
-            <TextBox x:Name="login" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Grid.Row="2" Background="White"/>
-            <Label Content="Введите пароль" HorizontalAlignment="Center" FontSize="14" Grid.Row="3"/>
-            <TextBox x:Name="passwords" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Grid.Row="4" Background="White"/>
-            <Button Grid.Row="5" Width="150" Margin="0,15,0,10" Click="EnterClick" >Вход</Button>
+            <Label Grid.Row="0" Content="Авторизация" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24"/>
+           
+            <Label Content="Введите логин" Grid.Row="1" HorizontalContentAlignment="Left"  />
+            <TextBox x:Name="login" Grid.Row="2" Width="300" HorizontalAlignment="Left" VerticalAlignment="Center" Height="25"/>
+            <Label Content="Введите пароль" Grid.Row="3" HorizontalContentAlignment="Left"/>
+            <TextBox x:Name="passwords" Grid.Row="4" Width="300" HorizontalAlignment="Left" VerticalAlignment="Center" Height="25"/>
+            <Button Grid.Row="5" Content="Вход" HorizontalAlignment="Center" Width="150" VerticalAlignment="Center" Height="25" Click="EnterClick" Name="enter"/>
         </Grid>
 
 

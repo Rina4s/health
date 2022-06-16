@@ -22,6 +22,17 @@ namespace health
         public Window2()
         {
             InitializeComponent();
+            frame1.Navigate(new PatientPage());
+        }
+
+        private void ShowPatients(object sender, RoutedEventArgs e)
+        {
+            frame1.Navigate(new PatientPage());
+        }
+
+        private void ShowWorkers(object sender, RoutedEventArgs e)
+        {
+            frame1.Navigate(new WorkerPage());
         }
     }
 }
