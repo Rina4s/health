@@ -23,8 +23,6 @@ namespace health
         public int id { get; set; }
         public System.DateTime date { get; set; }
         public System.TimeSpan time { get; set; }
-        
-         
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ListTimeTableForWorker> ListTimeTableForWorker { get; set; }

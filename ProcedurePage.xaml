@@ -9,18 +9,36 @@
       Title="ProcedurePage">
 
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="10*"/>
+
         </Grid.RowDefinitions>
-       
+
+
+
+        <ListView Name="ProcedureListView" Grid.Row="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <ListView.ItemTemplate>
+                <DataTemplate >
+                    <Grid Width="150" Height="150" MouseDown="ClickToListItem">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition/>
+
+                        </Grid.RowDefinitions>
+                        <Image Grid.RowSpan="2" Source="{Binding image}" Stretch="Fill"/>
+                        <Grid Grid.Row="1" Background="Gray" Opacity="0.85">
+                            <TextBlock Text="{Binding title}" TextWrapping="Wrap" FontFamily="Times New Roman" FontSize="18" HorizontalAlignment="Center" TextAlignment="Center"/>
+                        </Grid>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel></WrapPanel>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+        </ListView>
     </Grid>
 </Page>

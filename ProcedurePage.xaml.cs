@@ -20,9 +20,18 @@ namespace health
     /// </summary>
     public partial class ProcedurePage : Page
     {
+        HealthBDEntities context;
         public ProcedurePage()
         {
             InitializeComponent();
+            context = new HealthBDEntities();
+            ProcedureListView.ItemsSource = context.ListAnalysisAndProcedure.ToList();
+        }
+
+        private void ClickToListItem(object sender, MouseButtonEventArgs e)
+        {
+            ListAnalysisAndProcedure listAnalysisAndProcedure = (sender as Grid).DataContext as ListAnalysisAndProcedure;
+            NavigationService.Navigate(new ProcedurePage1(context, listAnalysisAndProcedure));
         }
     }
 }
