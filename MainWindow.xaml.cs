@@ -49,6 +49,7 @@ namespace health
                         MessageBox.Show("Успешная авторизация", "Успешно!", MessageBoxButton.OK, MessageBoxImage.Information);
                         Window2 window2 = new Window2();
                         window2.ShowDialog();
+
                         
                     }
                     else

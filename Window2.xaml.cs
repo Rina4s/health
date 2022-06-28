@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,8 +23,10 @@ namespace health
         public Window2()
         {
             InitializeComponent();
+            DowloadPict();
             frame1.Navigate(new PatientPage());
         }
+
 
         private void ShowPatients(object sender, RoutedEventArgs e)
         {
@@ -33,6 +36,23 @@ namespace health
         private void ShowWorkers(object sender, RoutedEventArgs e)
         {
             frame1.Navigate(new WorkerPage());
+        }
+
+        public void DowloadPict()
+        {
+            HealthBDEntities context = new HealthBDEntities();
+            List<ListAnalysisAndProcedure> procedures = context.ListAnalysisAndProcedure.ToList();
+            foreach (var item in procedures)
+            {
+                item.image = File.ReadAllBytes(@"C:\HealthPicture\" + item.id + ".jpg");
+            }
+                context.SaveChanges();
+        }
+
+
+        private void ShowProcedure(object sender, RoutedEventArgs e)
+        {
+            frame1.Navigate(new ProcedurePage());
         }
     }
 }

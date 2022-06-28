@@ -14,6 +14,8 @@ namespace health
     
     public partial class ListAnalysisAndProcedure
     {
+        internal byte[] image;
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ListAnalysisAndProcedure()
         {

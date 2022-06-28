@@ -30,23 +30,24 @@ namespace health
         public void RefreshData()
         {
             var list = context.Patient.ToList();
-            
 
             if (!string.IsNullOrWhiteSpace(fiobox.Text))
             {
                 list = list.Where(x => x.fio.ToLower().Contains(fiobox.Text.ToLower())).ToList();
             }
-            patienttable.ItemsSource = list;
             if (!string.IsNullOrWhiteSpace(omsbox.Text))
             {
-                
-                
-                
+                list = list.Where(x => x.oms.ToString().Contains(omsbox.Text.ToLower())).ToList();
             }
             patienttable.ItemsSource = list;
         }
 
         private void fiochanged(object sender, TextChangedEventArgs e)
+        {
+            RefreshData();
+        }
+
+        private void omschanged(object sender, TextChangedEventArgs e)
         {
             RefreshData();
         }
