@@ -27,7 +27,7 @@ namespace health
         public int idAppel { get; set; }
         public int idReception { get; set; }
         public int idTimeTable { get; set; }
-    
+        public string TitlePosition { get => ListPositions.title; }
         public virtual Appel Appel { get; set; }
         public virtual ListPositions ListPositions { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

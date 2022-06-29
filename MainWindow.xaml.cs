@@ -70,9 +70,6 @@ namespace health
             {
                 MessageBox.Show("Ошибка", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-
-
-
         }
 
         

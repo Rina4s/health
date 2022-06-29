@@ -28,12 +28,10 @@ namespace health
             frame1.Navigate(new PatientPage());
             if (worker.idPosition == 1)
             {
-                WorkersButton.Visibility = Visibility.Hidden;
-                ProceduresButton.Visibility = Visibility.Hidden;
+                WorkersButton.Visibility = Visibility.Collapsed;
+                ProceduresButton.Visibility = Visibility.Collapsed;
             }
         }
-
-        
 
         private void ShowPatients(object sender, RoutedEventArgs e)
         {
@@ -55,7 +53,6 @@ namespace health
             }
                 context.SaveChanges();
         }
-
 
         private void ShowProcedure(object sender, RoutedEventArgs e)
         {

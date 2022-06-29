@@ -1,0 +1,56 @@
+﻿<Page x:Class="health.AppelPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:health"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AppelPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+
+            <RowDefinition/>
+            <RowDefinition/>
+
+
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+        <Label Content="Заявка" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2" />
+
+        <Label Content="Клиент:" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="1" />
+        <ComboBox Name="clientBox"  Height="25" Grid.Column="1" Grid.Row="1" Width="250" HorizontalAlignment="Left" DisplayMemberPath="name" />
+
+        <Label Content="id:" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="2" />
+        <TextBox x:Name="idBox" Grid.Row="2" Grid.Column="1"  HorizontalAlignment="Left" Width="250" Height="25" Margin="5" />
+
+        <Label Content="Тип:" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="3" />
+        <ComboBox Name="typeBox"  Height="25" Grid.Column="1" Grid.Row="3" Width="250" HorizontalAlignment="Left" DisplayMemberPath="Title"  />
+
+        <Label Content="Модель:" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="4" />
+        <TextBox x:Name="modBox" Grid.Row="4" Grid.Column="1"  HorizontalAlignment="Left" Width="250" Height="25" Margin="5" />
+
+        <Label Content="Жалобы:" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="5" />
+        <TextBox x:Name="compBox" Grid.Row="5" Grid.Column="1"  HorizontalAlignment="Left" Width="250" Height="25" Margin="5" />
+
+        <Label Content="Мастер:" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="6" />
+        <ComboBox Name="masterBox"  Height="25" Grid.Column="1" Grid.Row="6" Width="250" HorizontalAlignment="Left" DisplayMemberPath="FIO" />
+
+        <Label Content="Повреждения:" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="7" />
+        <TextBox x:Name="damBox" Grid.Row="7" Grid.Column="1"  HorizontalAlignment="Left" Width="250" Height="25" Margin="5" />
+
+        <Button Content="Подать заявку" Grid.ColumnSpan="2" Grid.Row="8" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" />
+    </Grid>
+</Page>

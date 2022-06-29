@@ -73,6 +73,9 @@
     <Compile Include="Appel.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="AppelPage.xaml.cs">
+      <DependentUpon>AppelPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ListAnalysisAndProcedure.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -135,6 +138,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AddWorker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AppelPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
