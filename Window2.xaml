@@ -15,9 +15,9 @@
         <Grid Background="#FF278B27" >
             <StackPanel>
                 <Image Source="Logo.png" Margin="10"/>
-                <Button Width="150" Height="40" Margin="10,10,10,10" Click="ShowPatients">Пациенты</Button>
-                <Button Width="150" Height="40" Margin="10,0,10,10" Click="ShowWorkers">Врачи</Button>
-                <Button Width="150" Height="40" Margin="10,0,10,10" Click="ShowProcedure">Услуги</Button>
+                <Button Width="150" Height="40" Margin="10,10,10,10" Click="ShowPatients" Name="PatientsButton" >Пациенты</Button>
+                <Button Width="150" Height="40" Margin="10,0,10,10" Click="ShowWorkers" Name="WorkersButton" >Врачи</Button>
+                <Button Width="150" Height="40" Margin="10,0,10,10" Click="ShowProcedure" Name="ProceduresButton" >Услуги</Button>
                
             </StackPanel>
         </Grid>

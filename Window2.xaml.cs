@@ -20,13 +20,20 @@ namespace health
     /// </summary>
     public partial class Window2 : Window
     {
-        public Window2()
+        public Window2(Worker worker)
         {
             InitializeComponent();
+
             DowloadPict();
             frame1.Navigate(new PatientPage());
+            if (worker.idPosition == 1)
+            {
+                WorkersButton.Visibility = Visibility.Hidden;
+                ProceduresButton.Visibility = Visibility.Hidden;
+            }
         }
 
+        
 
         private void ShowPatients(object sender, RoutedEventArgs e)
         {

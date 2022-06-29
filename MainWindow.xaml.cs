@@ -37,6 +37,11 @@ namespace health
                 string pass = passwords.Text;
 
                 Worker worker = context.Worker.ToList().Find(x => x.idWorker == idWorker);
+
+                using(HealthBDEntities context=new HealthBDEntities())
+                 {
+                   worker = context.Worker.Find(Convert.ToInt32(login.Text));
+                 }
                 if (worker == null)
                 {
                     MessageBox.Show("Работника с таким логином не существует", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -47,19 +52,15 @@ namespace health
                     {
                         passwords.Background = new SolidColorBrush(Color.FromRgb(0, 255, 0));
                         MessageBox.Show("Успешная авторизация", "Успешно!", MessageBoxButton.OK, MessageBoxImage.Information);
-                        Window2 window2 = new Window2();
-                        window2.ShowDialog();
-
-                        
+                        Window2 window2 = new Window2(worker);
+                        window2.ShowDialog();   
                     }
                     else
                     {
                         passwords.Background = new SolidColorBrush(Color.FromRgb(255, 0, 0));
-                        MessageBox.Show("Пароль не совпадает", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
-                        
+                        MessageBox.Show("Пароль не совпадает", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);  
                     }
                 }
-
             }
             catch (FormatException)
             {
